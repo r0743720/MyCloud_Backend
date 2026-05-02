@@ -34,7 +34,7 @@ services:
       - piward-net
 
 volumes:
-  postgres-net:
+  postgres-data:
 
 networks:
   piward-net:
