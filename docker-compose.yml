@@ -22,7 +22,7 @@ services:
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/mycloud
       SPRING_DATASOURCE_USERNAME: postgres
-      SPRING_DATASOURCE_PASSWORD: ce45Z!ko8agh!ceF
+      SPRING_DATASOURCE_PASSWORD: mycloudpassword(very_secure)
       JWT_SECRET: iv1Ik/RLOJeQdikecjsIxX/U49Ly/prmRPB4hsqU8QJXOtrYt5gryjTgbce08DAw
       JWT_EXPIRATION_MS: 28800000
       STORAGE_PATH: /mnt/cloud-storage
@@ -32,9 +32,25 @@ services:
       - "8080:8080"
     networks:
       - piward-net
+  
+  mosquitto:
+    image: eclipse-mosquitto:2
+    container_name: mycloud-mosquitto
+    restart: unless-stopped
+    ports:
+      - "1883:1883"
+    volumes:
+      - ./mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf
+      - mosquitto-data:/mosquitto/data
+      - mosquitto-log:/mosquitto/log
+    networks:
+      - piward-net
 
 volumes:
   postgres-data:
+  mosquitto-config:
+  mosquitto-data:
+  mosquitto-log:
 
 networks:
   piward-net:
