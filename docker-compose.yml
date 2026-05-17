@@ -26,6 +26,7 @@ services:
       JWT_SECRET: iv1Ik/RLOJeQdikecjsIxX/U49Ly/prmRPB4hsqU8QJXOtrYt5gryjTgbce08DAw
       JWT_EXPIRATION_MS: 28800000
       STORAGE_PATH: /mnt/cloud-storage
+      MQTT_BROKER: tcp://mosquitto:1883
     volumes:
       - /mnt/cloud-storage:/mnt/cloud/storage
     ports:
