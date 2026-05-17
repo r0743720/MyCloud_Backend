@@ -7,7 +7,7 @@ services:
     environment:
       POSTGRES_DB: mycloud
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: mycloudpassword(very_secure)
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     volumes: 
       - postgres-data:/var/lib/postgresql/data
     networks:
@@ -22,13 +22,13 @@ services:
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/mycloud
       SPRING_DATASOURCE_USERNAME: postgres
-      SPRING_DATASOURCE_PASSWORD: mycloudpassword(very_secure)
-      JWT_SECRET: iv1Ik/RLOJeQdikecjsIxX/U49Ly/prmRPB4hsqU8QJXOtrYt5gryjTgbce08DAw
+      SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
+      JWT_SECRET: ${JWT_SECRET}
       JWT_EXPIRATION_MS: 28800000
       STORAGE_PATH: /mnt/cloud-storage
       MQTT_BROKER: tcp://mosquitto:1883
     volumes:
-      - /mnt/cloud-storage:/mnt/cloud/storage
+      - /mnt/cloud-storage:/mnt/cloud-storage
     ports:
       - "8080:8080"
     networks:
