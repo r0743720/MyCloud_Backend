@@ -7,13 +7,13 @@ import com.mycloud.server.repository.SensorReadingRepository;
 import lombok.RequiredArgsConstructor;
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
-import org.hibernate.validator.internal.util.stereotypes.Lazy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.jackson.autoconfigure.JacksonProperties;
 import org.springframework.stereotype.Service;
 import tools.jackson.databind.JsonNode;
 import tools.jackson.databind.ObjectMapper;
-
+import org.springframework.context.annotation.Lazy;
 @Service
 @RequiredArgsConstructor
 public class MqttSubscriberService {
