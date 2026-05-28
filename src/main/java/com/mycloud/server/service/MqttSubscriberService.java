@@ -5,7 +5,10 @@ import com.mycloud.server.model.SensorReading;
 import com.mycloud.server.repository.MovementAlertRepository;
 import com.mycloud.server.repository.SensorReadingRepository;
 import lombok.RequiredArgsConstructor;
+import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
+import org.hibernate.validator.internal.util.stereotypes.Lazy;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.jackson.autoconfigure.JacksonProperties;
 import org.springframework.stereotype.Service;
 import tools.jackson.databind.JsonNode;
@@ -18,6 +21,9 @@ public class MqttSubscriberService {
     private final MovementAlertRepository movementAlertRepository;
     private final SensorReadingRepository sensorReadingRepository;
     private final ObjectMapper objectMapper =  new ObjectMapper();
+    @Lazy
+    @Autowired
+    private MqttClient mqttClient;
 
     public void onSensorMessage(String topic, MqttMessage message){
         try{
@@ -49,6 +55,15 @@ public class MqttSubscriberService {
             System.out.println("Movement alert saved: " + payload);
         } catch(Exception e){
             System.out.println("Movement alert save failed: " + e.getMessage());
+        }
+    }
+    public void publishFanCommand(boolean on) {
+        try {
+            String payload = "{\"on\":" + on + "}";
+            mqttClient.publish("mycloud/commands/fan",
+                    new org.eclipse.paho.client.mqttv3.MqttMessage(payload.getBytes()));
+        } catch (Exception e) {
+            System.err.println("Error publishing fan command: " + e.getMessage());
         }
     }
 }
