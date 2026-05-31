@@ -1,0 +1,84 @@
+Full Name,Age,Title,Course,Employed Since,Contract Type,Department,Salary,Email,Performance Rating,Years Employed,Eligible for Promotion,Tenure Category
+John Smith,32.0,Senior Developer,Python Advanced,2019-03-15,Full-Time,Engineering,85000.0,john.smith@company.com,4.5,7.1,True,Senior
+Sarah Johnson,28.0,Product Manager,Project Management,2020-01-10,Full-Time,Product,92000.0,sarah.johnson@company.com,4.8,6.3,True,Senior
+Michael Chen,45.0,Director,Leadership,2015-06-22,Full-Time,Engineering,125000.0,michael.chen@company.com,4.9,10.9,True,Veteran
+Emma Davis,26.0,Junior Developer,Java Basics,2022-09-01,Full-Time,Engineering,62000.0,emma.davis@company.com,3.8,3.7,False,Mid-level
+Robert Wilson,38.0,DevOps Engineer,Cloud Infrastructure,2018-11-05,Full-Time,Engineering,95000.0,robert.wilson@company.com,4.6,7.5,True,Senior
+Jessica Martinez,31.0,UX Designer,Design Thinking,2019-05-12,Full-Time,Design,78000.0,jessica.martinez@company.com,4.4,7.0,True,Senior
+David Anderson,35.0,QA Lead,Software Testing,2017-02-20,Full-Time,Quality,88000.0,david.anderson@company.com,4.5,9.2,True,Senior
+Lisa Thompson,29.0,Data Analyst,Data Science,2021-04-08,Full-Time,Analytics,72000.0,lisa.thompson@company.com,4.2,5.1,True,Senior
+James White,42.0,Backend Engineer,Microservices,2016-10-15,Full-Time,Engineering,102000.0,james.white@company.com,4.7,9.5,True,Senior
+Amanda Garcia,27.0,Frontend Developer,React Mastery,2022-01-18,Full-Time,Engineering,68000.0,amanda.garcia@company.com,4.1,4.3,False,Mid-level
+Christopher Lee,36.0,DevOps Manager,Infrastructure,2018-07-30,Full-Time,Operations,98000.0,christopher.lee@company.com,4.5,7.7,True,Senior
+Nicole Brown,30.0,Graphic Designer,Advanced Design,2020-08-10,Full-Time,Design,75000.0,nicole.brown@company.com,4.3,5.7,True,Senior
+Thomas Rodriguez,44.0,Software Architect,System Design,2014-12-01,Full-Time,Engineering,130000.0,thomas.rodriguez@company.com,4.8,11.4,True,Veteran
+Rachel White,25.0,Content Writer,Technical Writing,2023-02-14,Contract,Marketing,52000.0,rachel.white@company.com,3.7,3.2,False,Mid-level
+Kevin Johnson,39.0,Finance Manager,Accounting,2017-03-20,Full-Time,Finance,96000.0,kevin.johnson@company.com,4.6,9.1,True,Senior
+Victoria Lee,33.0,HR Specialist,HR Management,2019-09-02,Full-Time,Human Resources,71000.0,victoria.lee@company.com,4.2,6.7,True,Senior
+Mark Taylor,41.0,Sales Director,Sales Strategy,2016-01-11,Full-Time,Sales,110000.0,mark.taylor@company.com,4.7,10.3,True,Veteran
+Catherine White,28.0,Junior QA,Manual Testing,2022-06-15,Full-Time,Quality,58000.0,catherine.white@company.com,3.9,3.9,False,Mid-level
+Andrew Davis,37.0,IT Support Lead,Technical Support,2018-04-25,Full-Time,IT,82000.0,andrew.davis@company.com,4.4,8.0,True,Senior
+Michelle Clark,31.0,Business Analyst,Requirements,2020-02-03,Full-Time,Product,79000.0,michelle.clark@company.com,4.3,6.2,True,Senior
+Daniel Garcia,43.0,Network Engineer,Networking,2015-09-14,Full-Time,IT,101000.0,daniel.garcia@company.com,4.6,10.6,True,Veteran
+Susan Martinez,26.0,Marketing Coordinator,Digital Marketing,2022-11-21,Full-Time,Marketing,55000.0,susan.martinez@company.com,3.8,3.4,False,Mid-level
+Matthew Moore,38.0,Security Engineer,Cybersecurity,2017-05-08,Full-Time,Security,105000.0,matthew.moore@company.com,4.7,9.0,True,Senior
+Linda Taylor,32.0,Product Designer,UX Research,2019-12-09,Full-Time,Design,81000.0,linda.taylor@design.com,4.4,6.4,True,Senior
+Joseph Anderson,45.0,Chief Technology Officer,Technology Strategy,2013-01-15,Full-Time,Engineering,150000.0,joseph.anderson@company.com,4.9,13.3,True,Veteran
+Patricia Thompson,29.0,Scrum Master,Agile,2021-07-12,Full-Time,Operations,76000.0,patricia.thompson@company.com,4.2,4.8,False,Mid-level
+Charles Wilson,34.0,Solutions Architect,Enterprise Solutions,2019-02-18,Full-Time,Engineering,112000.0,charles.wilson@company.com,4.6,7.2,True,Senior
+Barbara Martin,27.0,Junior Analyst,Data Analysis,2022-08-22,Full-Time,Analytics,61000.0,barbara.martin@company.com,3.9,3.7,False,Mid-level
+Donald Jackson,40.0,Senior Consultant,Consulting,2016-04-05,Full-Time,Consulting,108000.0,donald.jackson@company.com,4.5,10.1,True,Veteran
+Elizabeth White,30.0,Technical Writer,Documentation,2020-10-19,Full-Time,Engineering,68000.0,elizabeth.white@company.com,4.1,5.5,True,Senior
+Richard Harris,36.0,Database Administrator,Database Design,2018-06-25,Full-Time,Engineering,94000.0,richard.harris@company.com,4.5,7.8,True,Senior
+Judith Brown,28.0,UX Researcher,User Research,2021-09-06,Full-Time,Design,73000.0,judith.brown@company.com,4.3,4.6,False,Mid-level
+Jose Martinez,42.0,Infrastructure Specialist,Cloud Services,2016-11-30,Full-Time,Operations,99000.0,jose.martinez@company.com,4.6,9.4,True,Senior
+Dorothy Clark,31.0,Performance Manager,Performance,2019-08-12,Full-Time,Human Resources,74000.0,dorothy.clark@company.com,4.2,6.7,True,Senior
+Lawrence Lee,35.0,Full Stack Developer,Full Stack,2018-12-03,Full-Time,Engineering,89000.0,lawrence.lee@company.com,4.4,7.4,True,Senior
+Maria Garcia,26.0,Assistant Designer,Graphic Design,2023-01-30,Full-Time,Design,54000.0,maria.garcia@company.com,3.7,3.2,False,Mid-level
+Frank Rodriguez,44.0,Chief Product Officer,Product Strategy,2014-03-17,Full-Time,Product,145000.0,frank.rodriguez@company.com,4.9,12.1,True,Veteran
+Ruth Anderson,29.0,Customer Success Manager,Customer Success,2020-12-07,Full-Time,Sales,77000.0,ruth.anderson@company.com,4.3,5.4,True,Senior
+George Brown,38.0,Systems Engineer,Systems Administration,2017-08-14,Full-Time,IT,92000.0,george.brown@company.com,4.5,8.7,True,Senior
+Ann Taylor,32.0,Legal Advisor,Corporate Law,2019-04-22,Full-Time,Legal,103000.0,ann.taylor@company.com,4.6,7.0,True,Senior
+Paul Johnson,41.0,Finance Director,Financial Planning,2015-10-05,Full-Time,Finance,115000.0,paul.johnson@company.com,4.7,10.6,True,Veteran
+Jennifer Martin,27.0,Compliance Officer,Compliance,2022-03-15,Full-Time,Compliance,65000.0,jennifer.martin@company.com,3.9,4.1,False,Mid-level
+Kenneth Wilson,39.0,Engineering Manager,Management,2017-06-19,Full-Time,Engineering,107000.0,kenneth.wilson@company.com,4.6,8.9,True,Senior
+Janet Lee,30.0,Marketing Manager,Marketing Strategy,2020-05-11,Full-Time,Marketing,85000.0,janet.lee@company.com,4.4,6.0,True,Senior
+Steven Garcia,36.0,Quality Architect,Quality Management,2018-09-25,Full-Time,Quality,96000.0,steven.garcia@company.com,4.5,7.6,True,Senior
+Gloria Davis,28.0,Administrative Assistant,Office Management,2021-10-18,Full-Time,Administration,49000.0,gloria.davis@company.com,3.6,4.5,False,Mid-level
+Ronald Miller,43.0,Chief Information Officer,IT Strategy,2014-02-10,Full-Time,IT,155000.0,ronald.miller@company.com,4.9,12.2,True,Veteran
+Catherine Brown,25.0,Intern Developer,Programming,2023-06-12,Internship,Engineering,35000.0,catherine.brown@company.com,3.2,2.9,False,Mid-level
+Dennis Martinez,37.0,Account Manager,Sales,2018-01-29,Full-Time,Sales,88000.0,dennis.martinez@company.com,4.3,8.2,True,Senior
+Margaret Johnson,31.0,Training Coordinator,Employee Training,2020-03-02,Full-Time,Human Resources,62000.0,margaret.johnson@company.com,4.1,6.2,True,Senior
+Jerry Clark,44.0,Operations Manager,Operations,2015-07-08,Full-Time,Operations,94000.0,jerry.clark@company.com,4.5,10.8,True,Veteran
+Diane White,26.0,Junior Content Writer,Writing,2022-09-26,Contract,Marketing,48000.0,diane.white@company.com,3.5,3.6,False,Mid-level
+Tyler Lee,33.0,Solutions Engineer,Solutions,2019-11-04,Full-Time,Sales,87000.0,tyler.lee@company.com,4.4,6.5,True,Senior
+Victoria Garcia,29.0,Database Analyst,Database,2021-02-15,Full-Time,Engineering,71000.0,victoria.garcia@company.com,4.1,5.2,True,Senior
+Aaron Martinez,40.0,Security Manager,Security,2016-05-23,Full-Time,Security,106000.0,aaron.martinez@company.com,4.6,9.9,True,Senior
+Helen Brown,27.0,Brand Manager,Branding,2022-04-18,Full-Time,Marketing,64000.0,helen.brown@company.com,3.8,4.0,False,Mid-level
+Adam Johnson,35.0,Cloud Architect,Cloud,2018-10-11,Full-Time,Engineering,110000.0,adam.johnson@company.com,4.7,7.5,True,Senior
+Kathryn Davis,32.0,Product Owner,Product Development,2019-07-01,Full-Time,Product,86000.0,kathryn.davis@company.com,4.4,6.8,True,Senior
+Bryan Wilson,38.0,Network Manager,IT Networks,2017-12-18,Full-Time,IT,97000.0,bryan.wilson@company.com,4.5,8.4,True,Senior
+Emily White,24.0,Graduate Consultant,Consulting,2023-07-10,Internship,Consulting,40000.0,emily.white@company.com,3.3,2.8,False,Mid-level
+Nicholas Harris,42.0,Business Development Director,Business Growth,2015-08-26,Full-Time,Sales,112000.0,nicholas.harris@company.com,4.7,10.7,True,Veteran
+Amber Lee,28.0,Automation Engineer,Automation Testing,2021-05-31,Full-Time,Quality,75000.0,amber.lee@company.com,4.2,4.9,False,Mid-level
+Kevin Brown,36.0,IT Director,IT Management,2018-03-12,Full-Time,IT,115000.0,kevin.brown@company.com,4.6,8.1,True,Senior
+Sophie Garcia,30.0,Talent Recruiter,Recruitment,2020-06-29,Full-Time,Human Resources,73000.0,sophie.garcia@company.com,4.2,5.8,True,Senior
+Benjamin Clark,39.0,Risk Manager,Risk Assessment,2017-01-23,Full-Time,Legal,102000.0,benjamin.clark@company.com,4.5,9.3,True,Senior
+Nancy Davis,25.0,Social Media Specialist,Social Media,2023-04-03,Full-Time,Marketing,51000.0,nancy.davis@company.com,3.6,3.1,False,Mid-level
+Joshua Martinez,37.0,Application Developer,App Development,2018-08-15,Full-Time,Engineering,91000.0,joshua.martinez@company.com,4.4,7.7,True,Senior
+Alice Lee,31.0,Procurement Manager,Procurement,2019-10-07,Full-Time,Operations,79000.0,alice.lee@company.com,4.3,6.6,True,Senior
+Jacob Wilson,44.0,VP Engineering,Executive,2013-05-20,Full-Time,Engineering,160000.0,jacob.wilson@company.com,4.9,12.9,True,Veteran
+Jane Brown,28.0,Systems Administrator,System Admin,2021-11-08,Full-Time,IT,68000.0,jane.brown@company.com,4.0,4.5,False,Mid-level
+Austin Taylor,34.0,Product Lead,Product Strategy,2019-01-14,Full-Time,Product,88000.0,austin.taylor@company.com,4.5,7.3,True,Senior
+Olivia Garcia,26.0,Data Engineer,Data Pipeline,2022-10-03,Full-Time,Engineering,76000.0,olivia.garcia@company.com,4.2,3.6,False,Mid-level
+Mason Harris,41.0,Finance Analyst,Financial Analysis,2016-02-08,Full-Time,Finance,85000.0,mason.harris@company.com,4.4,10.2,True,Veteran
+Harper Martinez,34.0,Consultant,Consulting,,Full-Time,Consulting,105000.0,harper.martinez@company.com,4.6,,False,Unknown
+Evelyn Davis,27.0,Designer,UX,,Full-Time,Design,71000.0,evelyn.davis@company.com,4.2,,False,Unknown
+Logan Garcia,30.0,Data Scientist,Python,,Full-Time,Analytics,81000.0,logan.garcia@company.com,4.3,,False,Unknown
+Aiden Davis,42.0,Security Analyst,Security,2016-11-12,Full-Time,Security,98000.0,aiden.davis@company.com,4.1,9.5,True,Senior
+Scarlett Wilson,29.0,Marketing Manager,Marketing,2020-04-20,FT,Marketing,79000.0,scarlett.wilson@company.com,4.4,6.0,True,Senior
+Victoria Taylor,33.0,Business Analyst,Analysis,2019-03-25,Full-Time,Product,80000.0,victoria.taylor@company.com,4.6,7.1,True,Senior
+Ava Martinez,27.0,Coordinator,Admin,2022-02-14,Full-Time,Administration,52000.0,ava.martinez@company.com,3.8,4.2,False,Mid-level
+Leo Davis,31.0,Specialist,Data,2020-07-01,Full-Time,Analytics,75000.0,leo.davis@company.com,4.1,5.8,True,Senior
+Mia Wilson,25.0,Associate,Sales,2023-05-16,Full-Time,Sales,48000.0,mia.wilson@company.com,3.4,3.0,False,Mid-level
+Lucas Brown,29.0,Officer,Compliance,2021-09-13,Full-Time,Compliance,66000.0,lucas.brown@company.com,4.0,4.6,False,Mid-level
