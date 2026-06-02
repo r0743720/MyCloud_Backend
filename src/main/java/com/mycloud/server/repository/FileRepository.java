@@ -38,4 +38,15 @@ public interface FileRepository extends JpaRepository<File, Long> {
     @Query("SELECT f.fileType, SUM(f.fileSize) FROM File f WHERE f.owner = :owner GROUP BY f.fileType")
     List<Object[]> sumBytesByFileType(User owner);
     long countByOwner(User owner);
+    @Query("SELECT f FROM File f ORDER BY f.createdAt DESC")
+    List<File> findAllFiles();
+
+    @Query("SELECT SUM(f.fileSize) FROM File f")
+    Long sumAllSizes();
+
+    @Query("SELECT f.fileType, COUNT(f) FROM File f GROUP BY f.fileType")
+    List<Object[]> countAllByFileType();
+
+    @Query("SELECT f.fileType, SUM(f.fileSize) FROM File f GROUP BY f.fileType")
+    List<Object[]> sumAllBytesByFileType();
 }

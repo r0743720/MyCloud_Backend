@@ -4,6 +4,7 @@ import com.mycloud.server.model.MovementAlert;
 import com.mycloud.server.model.SensorReading;
 import com.mycloud.server.repository.MovementAlertRepository;
 import com.mycloud.server.repository.SensorReadingRepository;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -31,6 +32,7 @@ public class SensorController {
     }
 
     @GetMapping("/history")
+    @Cacheable(value = "sensorHistory", key = "#hours")
     public List<SensorReading> history(@RequestParam(defaultValue = "24") int hours) {
         LocalDateTime since = LocalDateTime.now().minusHours(hours);
         return sensorReadingRepository.findByTimestampAfterOrderByTimestampAsc(since);

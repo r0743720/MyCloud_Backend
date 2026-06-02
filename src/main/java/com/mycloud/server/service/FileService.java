@@ -5,6 +5,7 @@ import com.mycloud.server.model.File;
 import com.mycloud.server.model.User;
 import com.mycloud.server.repository.FileRepository;
 import com.mycloud.server.repository.UserRepository;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.core.io.Resource;
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.io.UrlResource;
@@ -28,9 +29,22 @@ public class FileService {
     private final UserRepository userRepository;
     private final StorageConfig storageConfig;
 
+    @CacheEvict(value = "storageStats", key = "#username")
     public File upload(MultipartFile file, String username) throws IOException {
         User owner = getUser(username);
 
+        // Check quota — skip for ADMIN
+        if (owner.getRole() != User.Role.ADMIN) {
+            Long used = fileRepository.sumSizeByOwner(owner);
+            long usedBytes = used != null ? used : 0L;
+            if (usedBytes + file.getSize() > owner.getStorageQuotaBytes()) {
+                throw new ResponseStatusException(
+                        HttpStatus.CONTENT_TOO_LARGE,
+                        "Storage quota exceeded. Used: " + usedBytes +
+                                " bytes, quota: " + owner.getStorageQuotaBytes() + " bytes."
+                );
+            }
+        }
         // Generate a unique filename to prevent collisions on disk
         String extension = getExtension(file.getOriginalFilename());
         String storedName = UUID.randomUUID() + (extension.isEmpty() ? "" : "." + extension);
@@ -50,6 +64,10 @@ public class FileService {
     }
 
     public List<File> listFiles(String username){
+        User owner = getUser(username);
+        if(owner.getRole() == User.Role.ADMIN){
+            return fileRepository.findAllFiles();
+        }
         return fileRepository.findByOwner(getUser(username));
     }
 
@@ -64,12 +82,14 @@ public class FileService {
         return resource;
     }
 
+    @CacheEvict(value = "storageStats", key = "#username")
     public File rename(Long fileId, String newName, String username) {
         File file = getOwnedFile(fileId, username);
         file.setFileName(newName);
         return fileRepository.save(file); // trigger fires here
     }
 
+    @CacheEvict(value = "storageStats", key = "#username")
     public void delete(Long fileId, String username) throws IOException {
         File file = getOwnedFile(fileId, username);
         Files.deleteIfExists(Path.of(file.getFileName()));
@@ -93,4 +113,6 @@ public class FileService {
         if (filename == null || !filename.contains(".")) return "";
         return filename.substring(filename.lastIndexOf('.') + 1);
     }
+
+
 }

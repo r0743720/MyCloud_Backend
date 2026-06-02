@@ -7,6 +7,7 @@ import com.mycloud.server.model.User;
 import com.mycloud.server.repository.FileRepository;
 import com.mycloud.server.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
@@ -33,9 +34,37 @@ public class StorageService {
         return dot > 0 ? filename.substring(0, dot) : filename;
     }
 
+    @Cacheable(value = "storageStats", key = "#username")
     public StorageStatsResponseDTO getStats(String username) {
         User owner = getUser(username);
 
+        if (owner.getRole() == User.Role.ADMIN) {
+            // Server-wide stats
+            long usedBytes = fileRepository.sumAllSizes();
+            long quota = 0; // no quota for admin
+            int totalFiles = (int) fileRepository.count();
+
+            Map<String, Long> byFileType = new LinkedHashMap<>();
+            for (Object[] row : fileRepository.countAllByFileType()) {
+                String type = row[0] != null ? (String) row[0] : "unknown";
+                byFileType.put(type, (Long) row[1]);
+            }
+
+            Map<String, Long> bytesByFileType = new LinkedHashMap<>();
+            for (Object[] row : fileRepository.sumAllBytesByFileType()) {
+                String type = row[0] != null ? (String) row[0] : "unknown";
+                bytesByFileType.put(type, (Long) row[1]);
+            }
+
+            return new StorageStatsResponseDTO(
+                    quota,
+                    usedBytes,
+                    0,
+                    totalFiles,
+                    byFileType,
+                    bytesByFileType
+            );
+        }
         long usedBytes = Optional.ofNullable(
                 fileRepository.sumSizeByOwner(owner)).orElse(0L);
         long quota = owner.getStorageQuotaBytes();
@@ -100,4 +129,5 @@ public class StorageService {
         }
         return result;
     }
+
 }
